@@ -155,13 +155,17 @@ function mostrarPropiedades(contenedor, propiedades) {
   }
 }
 
-// MOSTRAR LAS 3 PRIMERAS PROPIEDADES DE CADA TIPO (VENTA/ALQUILER) EN INDEX.html
-if (window.location.pathname.includes("index.html")) {
-  const contenedorVentas = document.querySelector(".contenedorVentas");
-  const contenedorAlquileres = document.querySelector(".contenedorAlquileres");
-  mostrarPropiedades(contenedorVentas, propiedades_venta.slice(0, 3));
-  mostrarPropiedades(contenedorAlquileres, propiedades_alquiler.slice(0, 3));
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // MOSTRAR LAS 3 PRIMERAS PROPIEDADES DE CADA TIPO (VENTA/ALQUILER) EN INDEX.html
+  if (window.location.pathname.includes("index.html")) {
+    const contenedorVentas = document.querySelector(".contenedorVentas");
+    const contenedorAlquileres = document.querySelector(".contenedorAlquileres");
+    mostrarPropiedades(contenedorVentas, propiedades_venta.slice(0, 3));
+    mostrarPropiedades(contenedorAlquileres, propiedades_alquiler.slice(0, 3));
+  }
+});
+
 
 // MOSTRAR TODAS LAS PROPIEDADES EN HTML DE VENTAS Y DE ALQUILER
 if (window.location.pathname.includes("propiedades_venta.html")) {
