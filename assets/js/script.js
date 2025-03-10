@@ -155,25 +155,22 @@ function mostrarPropiedades(contenedor, propiedades) {
   }
 }
 
+// MOSTRAR LAS 3 PRIMERAS PROPIEDADES DE CADA TIPO (VENTA/ALQUILER) EN "index.html"
+if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
+  const contenedorVentas = document.querySelector(".contenedorVentas");
+  const contenedorAlquileres = document.querySelector(".contenedorAlquileres");
+  mostrarPropiedades(contenedorVentas, propiedades_venta.slice(0, 3));
+  mostrarPropiedades(contenedorAlquileres, propiedades_alquiler.slice(0, 3));
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-  // MOSTRAR LAS 3 PRIMERAS PROPIEDADES DE CADA TIPO (VENTA/ALQUILER) EN INDEX.html
-  if (window.location.pathname.includes("index.html")) {
-    const contenedorVentas = document.querySelector(".contenedorVentas");
-    const contenedorAlquileres = document.querySelector(".contenedorAlquileres");
-    mostrarPropiedades(contenedorVentas, propiedades_venta.slice(0, 3));
-    mostrarPropiedades(contenedorAlquileres, propiedades_alquiler.slice(0, 3));
-  }
-});
-
-
-// MOSTRAR TODAS LAS PROPIEDADES EN HTML DE VENTAS Y DE ALQUILER
-if (window.location.pathname.includes("propiedades_venta.html")) {
+// MOSTRAR TODAS LAS PROPIEDADES EN "propiedades_venta.html"
+if (window.location.pathname === "/propiedades_venta.html") {
   const contenedorVentas = document.querySelector(".contenedorVentas");
   mostrarPropiedades(contenedorVentas, propiedades_venta);
 }
 
-if (window.location.pathname.includes("propiedades_alquiler.html")) {
+// MOSTRAR TODAS LAS PROPIEDADES EN "propiedades_alquiler.html"
+if (window.location.pathname === "/propiedades_alquiler.html") {
   const contenedorAlquileres = document.querySelector(".contenedorAlquileres");
   mostrarPropiedades(contenedorAlquileres, propiedades_alquiler);
 }
