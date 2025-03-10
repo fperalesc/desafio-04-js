@@ -156,7 +156,7 @@ function mostrarPropiedades(contenedor, propiedades) {
 }
 
 // MOSTRAR LAS 3 PRIMERAS PROPIEDADES DE CADA TIPO (VENTA/ALQUILER) EN "index.html"
-if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
+if (window.location.pathname === "/index.html" || window.location.pathname === "/" || window.location.pathname === "/desafio-04-js/" || window.location.pathname === "/desafio-04-js/index.html") {
   const contenedorVentas = document.querySelector(".contenedorVentas");
   const contenedorAlquileres = document.querySelector(".contenedorAlquileres");
   mostrarPropiedades(contenedorVentas, propiedades_venta.slice(0, 3));
@@ -164,13 +164,13 @@ if (window.location.pathname === "/index.html" || window.location.pathname === "
 }
 
 // MOSTRAR TODAS LAS PROPIEDADES EN "propiedades_venta.html"
-if (window.location.pathname === "/propiedades_venta.html") {
+if (window.location.pathname === "/propiedades_venta.html" || window.location.pathname === "/desafio-04-js/propiedades_venta.html") {
   const contenedorVentas = document.querySelector(".contenedorVentas");
   mostrarPropiedades(contenedorVentas, propiedades_venta);
 }
 
 // MOSTRAR TODAS LAS PROPIEDADES EN "propiedades_alquiler.html"
-if (window.location.pathname === "/propiedades_alquiler.html") {
+if (window.location.pathname === "/propiedades_alquiler.html" || window.location.pathname === "/desafio-04-js/propiedades_alquiler.html") {
   const contenedorAlquileres = document.querySelector(".contenedorAlquileres");
   mostrarPropiedades(contenedorAlquileres, propiedades_alquiler);
 }
